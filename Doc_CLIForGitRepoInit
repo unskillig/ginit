@@ -33,3 +33,6 @@ JS Command Line Interface for Git Repos
 
 ----repo.js
 ------create remote repo, gitIgnore file etc. [done]
+
+---make command 'ginit' available in command line
+------add bin to package.json in which we map the command to the index.js file
