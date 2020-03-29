@@ -1,0 +1,24 @@
+JS Command Line Interface for Git Repos
+
+---Projektordner anlegen und dorthin navigieren [done]
+
+---Node.js and npm installieren [done]
+
+---Libraries importieren [done]
+
+-----chalk (colorizes output)
+-----clear (clears the terminal screen)
+-----clui (draws command-line tables, gauges and spinners)
+-----figlet (creates ASCII art from text)
+-----inquirer (creates interactive command-line user interface)
+-----minimist (parses argument options)
+-----configstore (easily loads and saves config without you having to think about where and how)
+
+---index.js erstellen
+
+---helper modules erstellen
+
+-----check if current directory already contains a .git file (using fs and path libraries) [done]
+-----prompt user input (using inquirer library) [done]
+-----dealing with GitHub Authentification
+--------store config (user should not have to input data every time)
