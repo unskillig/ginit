@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
+//colorizes output
 const chalk = require('chalk')
+//clears the terminal screen
 const clear = require('clear')
+//creates ASCII art from text
 const figlet = require('figlet')
 const files = require('./lib/files');
 const github = require('./lib/github');
@@ -9,20 +12,24 @@ const repo = require('./lib/repo');
 
 clear();
 
+//print GINIT using chalk and figlet
 console.log(
   chalk.yellow(
     figlet.textSync('Ginit', { horizontalLayout: 'full' })
   )
 );
 
+// in case a .git file is present in current directory, process is abandoned
 if(files.directoryExists('.git')){
     console.log(chalk.red('Already a Git repository!'));
     process.exit();
 }
 
+//Fetch token from config store; stored in /home/nils/.config/configstore/ginit.json
   const getGithubToken = async () => {
-    // Fetch token from config store
     let token = github.getStoredGithubToken();
+
+    // if token exists return it
     if(token) {
       return token;
     }
