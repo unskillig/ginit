@@ -18,7 +18,18 @@ JS Command Line Interface for Git Repos
 
 ---helper modules erstellen
 
+----files.js
 -----check if current directory already contains a .git file (using fs and path libraries) [done]
+
+----inquirer.js
 -----prompt user input (using inquirer library) [done]
------dealing with GitHub Authentification
---------store config (user should not have to input data every time)
+
+----github.js
+-----dealing with GitHub Authentification [done]
+--------communicating with the GitHub API using Octokit [done]
+--------create spinner to indicate user that processing is taking place [done]
+--------store config (user should not have to input data every time) [done]
+--------take care of optional 2factor authentification [done]
+
+----repo.js
+------create remote repo, gitIgnore file etc. [done]
